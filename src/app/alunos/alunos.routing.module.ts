@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 
 const alunosRoutes = [
   {
-    path: 'alunos', component: AlunosComponent, children: [ // para fncionar <router-outlet></router-outlet> no html
+    path: '', component: AlunosComponent, children: [ // para funcionar <router-outlet></router-outlet> no html
       { path: 'novo', component: AlunoFormComponent },
       { path: ':id', component: AlunoDetalheComponent },
       { path: ':id/editar', component: AlunoFormComponent }

@@ -11,9 +11,8 @@ import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
-  // { path: 'cursos', loadChildren: '../app/cursos/cursos.module#CursosModule'},
   { path: 'cursos', loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule) },
-  // loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule)
+  { path: 'alunos', loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule) },
   // { path: 'cursos', component: CursosComponent },
   // { path: 'curso/:id', component: CursoDetalheComponent },
   { path: 'login', component: LoginComponent },

@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CursosComponent } from './cursos.component';
@@ -8,10 +7,9 @@ import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-en
 
 
 const cursosRoutes: Routes = [
-  // { path: 'cursos', component: CursosComponent },
-  { path: '', component: CursosComponent }, // loadChildren não precisa do path preenchido
-  { path: 'naoEncontrado', component: CursoNaoEncontradoComponent },
-  { path: ':id', component: CursoDetalheComponent }
+      { path: '', component: CursosComponent }, // loadChildren não precisa do path preenchido
+      { path: 'naoEncontrado', component: CursoNaoEncontradoComponent },
+      { path: ':id', component: CursoDetalheComponent },
 ];
 
 @NgModule({
@@ -19,6 +17,6 @@ const cursosRoutes: Routes = [
   exports: [RouterModule]
 })
 
-export class CursosRoutingModule{
+export class CursosRoutingModule {
 
 }
