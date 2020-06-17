@@ -1,4 +1,3 @@
-import { routing } from './app.routing';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 

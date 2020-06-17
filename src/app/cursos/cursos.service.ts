@@ -1,4 +1,3 @@
-import { CursosComponent } from './cursos.component';
 import { Injectable } from '@angular/core';
 
 @Injectable({

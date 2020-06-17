@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
@@ -10,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
-  { path: 'cursos', loadChildren: '/cursos/cursos.module#CursosModule' }, // comentar os imports de CursosModule
+  { path: 'cursos', loadChildren: './cursos/cursos.module#CursosModule'},
   // { path: 'cursos', component: CursosComponent },
   // { path: 'curso/:id', component: CursoDetalheComponent },
   { path: 'login', component: LoginComponent },
@@ -19,7 +18,8 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [
+    RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
