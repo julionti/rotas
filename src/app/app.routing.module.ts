@@ -3,13 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+
+// import { CursosModule } from './cursos/cursos.module';
 // import { CursosComponent } from './cursos/cursos.component';
 // import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 // import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 
 
 const appRoutes: Routes = [
-  { path: 'cursos', loadChildren: './cursos/cursos.module#CursosModule'},
+  // { path: 'cursos', loadChildren: '../app/cursos/cursos.module#CursosModule'},
+  { path: 'cursos', loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule) },
+  // loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule)
   // { path: 'cursos', component: CursosComponent },
   // { path: 'curso/:id', component: CursoDetalheComponent },
   { path: 'login', component: LoginComponent },
@@ -22,5 +26,6 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule {
 }

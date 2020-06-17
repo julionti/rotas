@@ -26,7 +26,7 @@ export class CursosComponent implements OnInit, OnDestroy {
 
     this.inscricao = this.route.queryParams.subscribe(
       (queryParams: any) => {
-        this.pagina = queryParams['pagina'];
+        this.pagina = queryParams.pagina;
       }
     );
   }
@@ -38,7 +38,7 @@ export class CursosComponent implements OnInit, OnDestroy {
   proximaPagina() {
     // this.pagina++;
     this.router.navigate(['/cursos'],
-      { queryParams: { 'pagina': ++this.pagina } });
+      { queryParams: { pagina: ++this.pagina } });
   }
 
 }
