@@ -29,4 +29,8 @@ export class AuthService {
       this.mostraMenuEmitter.emit(false);
     }
   }
+
+  usuarioEstaAutenticado() {
+    return this.usuarioAutenticado;
+  }
 }
