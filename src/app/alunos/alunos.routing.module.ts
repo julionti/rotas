@@ -1,12 +1,16 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, CanActivateChild } from '@angular/router';
+
+import { AlunosGuard } from './../guards/alunos.guard';
 import { AlunoFormComponent } from './aluno-form/aluno-form.component';
 import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunosComponent } from './alunos.component';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 const alunosRoutes = [
   {
-    path: '', component: AlunosComponent, children: [ // para funcionar <router-outlet></router-outlet> no html
+    path: '', component: AlunosComponent,
+    CanActivateChild: [AlunosGuard],
+    children: [ // para funcionar <router-outlet></router-outlet> no html
       { path: 'novo', component: AlunoFormComponent },
       { path: ':id', component: AlunoDetalheComponent },
       { path: ':id/editar', component: AlunoFormComponent }
