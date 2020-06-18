@@ -1,1 +1,13 @@
-<p>login works!</p>
+<div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Usuário</label>
+    <input [(ngModel)]="usuario.nome" type="text" class="active" id="usuario" aria-describedby="usuarioHelp">
+  </div>
+  <div class="form-group">
+    <label for="senha">Senha</label>
+    <input [(ngModel)]="usuario.senha" type="password" class="validate" id="senha">
+  </div>
+  <button type="submit"
+    (click)="fazerLogin()"
+   class="btn btn-primary">Submit</button>
+</div>

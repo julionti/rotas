@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -24,6 +25,7 @@ import { LoginComponent } from './login/login.component';
   imports: [
     AppRoutingModule,
     BrowserModule, // só aki
+    FormsModule,
     // routing,
     BrowserAnimationsModule
     // CursosModule,
