@@ -13,6 +13,7 @@ const APP_ROUTES: Routes = [
   // { path: 'curso/:id', component: CursoDetalheComponent },
   { path: 'login', component: LoginComponent },
   { path: 'naoEncontrado', component: CursoNaoEncontradoComponent },
+  { path: 'home', component: HomeComponent },
   { path: '', component: HomeComponent }
 ];
 
