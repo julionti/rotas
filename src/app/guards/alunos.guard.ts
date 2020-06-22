@@ -24,10 +24,10 @@ export class AlunosGuard implements CanActivateChild {
     console.log('AlunosGuard: Guarda de rora filha');
 
     // if (state.url.includes('editar')) { // negando permissão de edicao
-      // alert('Usuário com acesso!');
-      // return false;
-      // return Observable.create(false); // Posso fazer chamada remota a um serviço para verificar permissao
-      // return true;
+    // alert('Usuário com acesso!');
+    // return false;
+    // return Observable.create(false); // Posso fazer chamada remota a um serviço para verificar permissao
+    // return true;
 
     // }
 
