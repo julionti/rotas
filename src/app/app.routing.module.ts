@@ -38,7 +38,7 @@ const appRoutes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: '', redirectTo: 'home', pathMatch:'full',
+    path: '', redirectTo: 'home', pathMatch: 'full',
     canActivate: [AuthGuard]
   },
   { path: '**', component: PaginaNaoEncontradaComponent, canActivate: [AuthGuard] }
@@ -46,7 +46,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes)],
+    RouterModule.forRoot(appRoutes, { useHash: true })], // usar # nos links
   exports: [RouterModule]
 })
 
