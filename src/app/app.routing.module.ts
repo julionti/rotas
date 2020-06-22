@@ -1,11 +1,11 @@
-import { AlunosGuard } from './guards/alunos.guard';
-import { CursosGuard } from './guards/cursos.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AlunosGuard } from './guards/alunos.guard';
+import { CursosGuard } from './guards/cursos.guard';
 
 // import { CursosModule } from './cursos/cursos.module';
 // import { CursosComponent } from './cursos/cursos.component';

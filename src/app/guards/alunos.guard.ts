@@ -21,6 +21,7 @@ export class AlunosGuard implements CanActivateChild {
 
     console.log(route);
     console.log(state);
+    console.log('AlunosGuard: Guarda de rora filha');
 
     // if (state.url.includes('editar')) { // negando permissão de edicao
       // alert('Usuário com acesso!');
